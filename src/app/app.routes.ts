@@ -10,6 +10,6 @@ export const routes: Routes = [
               path: '',
               loadComponent: () => import('./landing/components/main/main.component'),
             },
-        ]
+        ],
      }
 ];
