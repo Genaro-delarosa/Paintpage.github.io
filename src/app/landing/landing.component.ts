@@ -7,7 +7,7 @@ import { MenuComponent } from '../shared/menu/menu.component';
 @Component({
   selector: 'app-landing',
   standalone: true,
-  imports: [RouterModule, NavComponent, FooterComponent, MenuComponent],
+  imports: [RouterModule, NavComponent, FooterComponent, MenuComponent, ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.css',
 })

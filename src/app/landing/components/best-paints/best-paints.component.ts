@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './best-paints.component.html',
   styleUrl: './best-paints.component.css'
 })
-export default class BestPaintsComponent {
+export class BestPaintsComponent {
 
 }
