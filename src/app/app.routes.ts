@@ -1,15 +1,36 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-    {
+  {
+    path: '',
+    title: 'Pinturas',
+    loadComponent: () => import('./landing/landing.component'),
+    children: [
+      {
         path: '',
-        title:'Pinturas',
-        loadComponent: () => import('./landing/landing.component'),
-        children: [
-            {
-              path: '',
-              loadComponent: () => import('./landing/components/main/main.component'),
-            },
-        ],
-     }
+        loadComponent: () => import('./landing/main/main.component'),
+      },
+      {
+        path: 'catalogo',
+        loadComponent: () => import('./landing/pages/catalog/catalog.component'),
+      },
+      {
+        path: 'nosotros',
+        loadComponent: () => import('./landing/pages/about-us/about-us.component'),
+      },
+      {
+        path: 'carrito',
+        loadComponent: () => import('./landing/pages/cart/cart.component'),
+      },
+      {
+        path: 'contactanos',
+        loadComponent: () => import('./landing/pages/contact-us/contact-us.component'),
+      },
+      {
+        path: 'producto/:slug',
+        loadComponent: () => import('./landing/pages/detail-product/detail-product.component'),
+      },
+
+    ],
+  }
 ];

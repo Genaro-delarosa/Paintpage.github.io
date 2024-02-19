@@ -9,6 +9,6 @@ import { MenuComponent } from '../shared/menu/menu.component';
   standalone: true,
   imports: [RouterModule, NavComponent, FooterComponent, MenuComponent, ],
   templateUrl: './landing.component.html',
-  styleUrl: './landing.component.css',
+  styleUrl: './landing.component.scss',
 })
 export default class LandingComponent {}

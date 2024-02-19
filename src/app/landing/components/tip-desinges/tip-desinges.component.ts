@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './tip-desinges.component.html',
-  styleUrl: './tip-desinges.component.css'
+  styleUrl: './tip-desinges.component.scss'
 })
 export class TipDesingesComponent {
 
