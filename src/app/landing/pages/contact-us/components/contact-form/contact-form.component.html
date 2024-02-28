@@ -1,0 +1,47 @@
+<div class="container text-center mt-5 mb-3">
+    <div class="row align-items-center">
+        <h2 class="display-5">Contacto:</h2>
+    </div>
+</div>
+<p class="fs-3 text-center">¿Tienes alguna pregunta o comentario? ¡Déjanos saber!</p>
+
+<div class="d-flex align-items-start">
+    <div class="my-4 d-none d-lg-block">
+        <img src="../assets/images/telephone.jpg" width="450" alt="">
+    </div>
+    <div class="card border-0 rounded-0 shadow  w-100">
+        <div class="card-body">
+            <form >
+                <div class="mb-3">
+                    <label for="from_name" class="form-label">Nombre</label>
+                    <input formControlName="from_name" type="text" class="form-control" id="from_name"
+                        aria-describedby="from_name_help">
+                    <div *ngIf="validateInput('from_name')">
+                        <small id="from_name_help" class="text-danger">Nombre es requerido.</small>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Correo</label>
+                    <input formControlName="from_email" type="email" class="form-control"
+                        id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <div *ngIf="errorControl['from_email']?.errors?.['required'] && errorControl['from_email'].touched">
+                        <small id="from_name_help" class="text-danger">El correo es requerido.</small>
+                    </div>
+                    <div *ngIf="errorControl['from_email']?.errors?.['pattern'] && errorControl['from_email'].touched">
+                        <small id="from_name_help" class="text-danger">Por favor ingresa un email válido.</small>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Mensaje</label>
+                    <textarea formControlName="message" type="text" class="form-control" id="exampleInputEmail1"
+                        aria-describedby="emailHelp"></textarea>
+                    <div *ngIf="validateInput('message')">
+                        <small id="from_name_help" class="text-danger">El mensaje es requerido.</small>
+                    </div>
+                </div>
+                <button [disabled]="" type="button" class="btn btn-primary btn-lg rounded-0 w-100"
+                    >Enviar</button>
+            </form>
+        </div>
+    </div>
+</div>
