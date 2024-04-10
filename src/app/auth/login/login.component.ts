@@ -1,12 +1,21 @@
 import { Component } from '@angular/core';
+import { ModalService } from '../services/modal.service';
 
 @Component({
   selector: 'app-login',
-  standalone: true,
-  imports: [],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrls: ['./login.component.scss']
 })
-export default class LoginComponent {
+export class LoginComponent {
+  showModal: boolean = false;
 
+  toggleModal() {
+    this.showModal = !this.showModal;
+  }
+
+  constructor(private modalService: ModalService) {}
+
+  closeModal(): void {
+    this.modalService.setShowModal(false);
+  }
 }

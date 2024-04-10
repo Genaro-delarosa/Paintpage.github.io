@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { LoginComponent } from './auth/login/login.component';
 
 export const routes: Routes = [
   {
@@ -28,13 +29,13 @@ export const routes: Routes = [
       },
       {
         path: 'login',
-        loadComponent: () => import('./auth/login/login.component'),
-      },
-      {
-        path: 'register',
-        loadComponent: () => import('./auth/register/register.component'),
-      },
-
+        component: LoginComponent, // Cargar directamente el componente LoginComponent
+        data: { title: 'Iniciar sesión' }
+      }
+      // {
+      //   path: 'producto/:slug',
+      //   loadChildren: () => import('./product/product.module').then(m => m.ProductModule)
+      // },
     ],
   }
 ];
