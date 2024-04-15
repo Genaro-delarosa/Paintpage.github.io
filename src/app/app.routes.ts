@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { LoginComponent } from './auth/login/login.component';
 
 export const routes: Routes = [
   {
@@ -26,14 +27,7 @@ export const routes: Routes = [
         path: 'contactanos',
         loadComponent: () => import('./landing/pages/contact-us/contact-us.component'),
       },
-      {
-        path: 'login',
-        loadComponent: () => import('./auth/login/login.component'),
-      },
-      {
-        path: 'register',
-        loadComponent: () => import('./auth/register/register.component'),
-      },
+      
       {
         path: 'terminos',
         loadComponent: () => import('./landing/pages/conditions/conditions/conditions.component'),

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuComponent } from '../menu/menu.component';
+import { ModalService } from '../../auth/services/modal.service';
 
 @Component({
   selector: 'app-nav',
@@ -9,5 +10,9 @@ import { MenuComponent } from '../menu/menu.component';
   styleUrl: './nav.component.scss'
 })
 export class NavComponent {
+  constructor(private modalService: ModalService) {}
 
+  openModal(): void {
+    this.modalService.setShowModal(true);
+  }
 }
