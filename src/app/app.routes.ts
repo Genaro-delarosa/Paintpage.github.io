@@ -34,7 +34,10 @@ export const routes: Routes = [
         path: 'register',
         loadComponent: () => import('./auth/register/register.component'),
       },
-
+      {
+        path: 'terminos',
+        loadComponent: () => import('./landing/pages/conditions/conditions/conditions.component'),
+      },
     ],
   }
 ];
